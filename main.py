@@ -127,7 +127,7 @@ with open('students.csv', encoding='utf-8') as f:
     reader = list(csv.DictReader(f, delimiter=','))
     for row in reader:
         row['id'] = hash(row['Name'])
-        students_with_hash.append(row)
+        students_with_hash.append(ow)
 with open('student+_with_hash.csv', 'w', encoding='utf-8') as f:
     writer = csv.DictWriter(f, fieldnames=['id', 'Name', 'titleProject_id', 'class', 'score'])
     writer.writeheader()
